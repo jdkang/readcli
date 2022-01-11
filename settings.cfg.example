@@ -1,0 +1,41 @@
+[logging]
+base_path = /var/opt/pyscrape/log
+rotation = 1 days
+retention = 10 days
+compression = zip
+
+[selenium]
+selenium_log_enabled = yes
+selenium_use_user_default_firefox_profile = no
+
+[google]
+# https://developers.google.com/tasks
+# project_id = xxxxxxxxxxxxxxxx
+# auth_provider_x509_cert_url = https://www.googleapis.com/oauth2/v1/certs
+# client_id = xxxxxxxxxxxxxxxx
+# client_secret = xxxxxxxxxxxxxxxx
+# redirect_uris = urn:ietf:wg:oauth:2.0:oob, http://localhost
+# auth_uri = https://accounts.google.com/o/oauth2/auth
+# token_uri = https://oauth2.googleapis.com/token
+
+[google.tasks]
+task_list = scrape
+
+[aws]
+# AWS identity with access to the s3 bucket
+# aws_access_key_id = xxxxxxxxxxxxxxxx
+# aws_secret_access_key = xxxxxxxxxxxxxxxx
+
+[aws.s3]
+bucket_name = foobar.com
+bucket_is_domain_alias = yes
+
+[pocket]
+# https://getpocket.com/developer/
+# pocket_consumer_key = xxxxxxxxxxxxxxxx
+# pocket_access_token = xxxxxxxxxxxxxxxx
+
+[slack]
+# https://api.slack.com/tutorials/hello-world-bolt
+# bot_token = xxxxxxxxxxxxxxxx
+# app_token = xxxxxxxxxxxxxxxx
