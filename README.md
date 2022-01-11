@@ -3,9 +3,21 @@ Tool to help scrape, mirror, and push content s3 website, and then queue in Pock
 
 The 'mirror site' also includes a `.png` screenshot and `.pdf` "print to PDF" version.
 
-Uses Selenium, Newspaper3k, S3 Websites, and Pocket API.
-
 Additional ability to consume links via Slack Bot or Google Tasks API (see `settings.cfg.example`)
+
+# commands
+## scrape url
+- scrape site using firefox (selenium) + load `.xpi` plugins
+- parse article using newspaper3k (text)
+- `-p/--push-pocket`
+    - take screenshot
+    - print `.pdf`
+    - format `.html`
+    - upload files to `s3` bucket under
+    - queue item in Pocket
+
+## scrape slackbot
+similar to `scrape url` but will accept URLs from a slack bot. slackbot is run sync so best run as a `systemd` service.
 
 # deps
 Probably doesn't work on windows without a few tweaks to pathing.
