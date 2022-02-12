@@ -1,7 +1,7 @@
 .venv/
-.vscode/
 __pycache__/
 *.json
+!.vscode/settings.json
 settings.cfg
 *.bkp
 bin/
