@@ -20,6 +20,8 @@ Additional ability to consume links via Slack Bot or Google Tasks API (see `sett
 similar to `scrape url` but will accept URLs from a slack bot. slackbot is run sync so best run as a `systemd` service.
 
 # deps
+(TODO: dockerize this with something like [selenium firefox](https://github.com/SeleniumHQ/docker-selenium) as a base image.)
+
 Probably doesn't work on windows without a few tweaks to pathing.
 
 - Python 3.9
